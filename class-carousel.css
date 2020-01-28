@@ -1,0 +1,109 @@
+/*--------------------------------------------------------------
+# Class Carousel
+# Basic CSS, may have forgotten to remove stuff used on Sito.Express
+--------------------------------------------------------------*/
+
+.class-carousel .slick-initialized .slick-slide {
+  margin: 30px;
+  display: flex;
+}
+
+.class-carousel .slick-slide > div {
+  background: transparent;
+  border-radius: 20px;
+  font-size: 0.9em;
+  color: #FFF
+}
+
+.class-carousel blockquote {
+  margin: 0;
+  border-left: 0;
+  position: relative;
+  padding: 20px 30px 30px;
+}
+
+.class-carousel blockquote::before {
+  content: '\f10d';
+  font-family: 'fontawesome';
+  color: #FFF;
+  display: block;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.class-carousel p {
+  margin-bottom: 1em;
+}
+
+.class-carousel p::after {
+  content: '';
+  width: 33%;
+  display: block;
+  height: 3px;
+  background: #FFF;
+  margin-top: 25px;
+}
+
+.class-carousel a,
+.class-carousel a:visited,
+.class-carousel a:hover {
+  color: #FFF !important;
+}
+
+@media screen and (max-width: 640px) {
+  .class-carousel {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+  .class-carousel .slick-initialized .slick-slide {
+    margin: 10px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Slick Arrows
+# Replaces Slick's default prev-next buttons with Fontawesome 4.7.0 icons
+--------------------------------------------------------------*/
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: transparent;
+  font-size: 0;
+  z-index: 9;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.slick-prev:focus,
+.slick-next:focus,
+.slick-prev:active,
+.slick-next:active,
+.slick-prev:hover,
+.slick-next:hover {
+  background: transparent;
+}
+
+.slick-prev::before,
+.slick-next::after {
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: 'FontAwesome';
+}
+
+.slick-prev::before {
+  content: '\f104';
+}
+
+.slick-next::after {
+  content: '\f105';
+}
